@@ -1,0 +1,72 @@
+.cast-section {
+  margin: 2rem 0;
+}
+
+.cast-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cast-item {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.cast-item:hover {
+  transform: translateY(-5px);
+}
+
+.cast-image {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.no-image {
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.cast-info {
+  padding: 0.8rem;
+}
+
+.actor-name {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.character {
+  color: #666;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.no-cast {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .cast-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .cast-image,
+  .no-image {
+    height: 180px;
+  }
+}
